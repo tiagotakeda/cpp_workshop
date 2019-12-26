@@ -451,7 +451,7 @@ Usually the C++ files have the ".cpp" extension and to compile it on a Linux ter
 Let's say I want to compile a file and its name is "file.cpp", the command I should put on the Terminal is:
 
 ```sh
-$ g++ file.cpp -o executable
+g++ file.cpp -o executable
 ```
 
 
@@ -463,7 +463,7 @@ The "-o" is to indicate what is going to be called the executable program that i
 To run the program just do it as any other script on a Linux Terminal:
 
 ```sh
-$ ./executable
+./executable
 ```
 
 
