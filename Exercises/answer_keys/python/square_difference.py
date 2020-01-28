@@ -2,8 +2,9 @@ import math
 
 def sqrdif(r):
 
-    larger_area = r*r*2*2
-    smaller_area = math.sqrt(2)*math.sqrt(2)*r*r
+    bigger_square_area = 2*r*2*r
+    smaller_square_area = math.sqrt(2)*r
+
     return larger_area - smaller_area
 
 def main():

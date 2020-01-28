@@ -12,7 +12,7 @@ def pentagonal(num):
 def main():
 
     num = int(input("Digit a number: "))
-    print(pentagonal(num))
+    print("The pentagonal number is: ", pentagonal(num))
 
 if __name__ == "__main__":
     main()

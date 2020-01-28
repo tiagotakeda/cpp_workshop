@@ -20,7 +20,7 @@ def main():
     a = int (a)
     b = int(b)
 
-    print(mmc(a, b))
+    print("The MMC between ", a, " and ", b, " is ", mmc(a, b))
 
 if __name__ == "__main__":
     main()
