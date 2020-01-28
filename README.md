@@ -16,8 +16,6 @@ If that may be an issue, you can easily follow this guide using an IDE (Codebloc
 
 
 
-
-
 ### Prerequisites
 
 * **Compilers**:

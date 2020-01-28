@@ -15,6 +15,7 @@ int main(){
     cout << "input b: ";
     cin >> b;
 
-    cout << addition(a, b) << endl;
+    cout << "(" << a << ", " << b << ")" << endl;
+    cout << "addition: " << addition(a, b) << endl;
     return 0;
 }
