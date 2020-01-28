@@ -8,7 +8,7 @@ This guide was developed to help members from Skyrats - Autonomous Drones Team f
 
 
 
-It assumes that the person who is reading this guide already have some basic programming experience in any other language, or even C++ and this can be used as a refreshing material.
+**It assumes that the person who is reading this guide already have some basic programming experience in any other language, or even C++ and this can be used as a refreshing material.**
 
 Since it is a routine for the members to be asked to install Linux (Ubuntu 16.04 LTS) when they enter the team, some instructions are given to be inserted on a Linux Terminal.
 
