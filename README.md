@@ -28,8 +28,7 @@ If that may be an issue, you can easily follow this guide using an IDE (Codebloc
 
 ## Contents
 
-
-
+* Basic Programming 
 * What is C++?
 * Quick Start - Hello World
 * Variables
@@ -39,6 +38,149 @@ If that may be an issue, you can easily follow this guide using an IDE (Codebloc
 * Hands On - Examples
 
 
+
+## Basic Programming
+To start programming you first need to understand what is a program
+
+### What is a Program?
+A program is a set of instructions that the computer executes.
+(To be more precise, a program is a set of instructions loaded in the CPU that the CPU executes to achieve an outcome).
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--z5YCFTsZ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/vr95ldiwraw9h36ae1ma.png)
+
+### Core Hardware Components to Run a Program
+The two major components to execute a program are
+i) CPU
+ii) Memory (RAM)
+
+CPU (Central Processing Unit) runs a set of instructions.
+RAM (Random Access Memory) works as a temporary storage to help the CPU achieve the desired output/outcome.
+
+Why we are discussing these boring hardware stuff before moving on to programming? To make you a better programmer by getting your fundamentals right.
+
+
+
+### Now on to Programming, but First ..
+a little bit of maths to begin with.
+
+Here is a simple equation
+Z = X + Y
+Suppose, the value of X is 100 and Y = 200, then
+we know Z = 300.
+
+Now here comes the twist of the programming world which shatters down the known world of an aspiring beginner. What if we change the equation to:
+
+Y = X + Y
+
+Believe it or not, this is a valid expression in almost all programming languages.
+
+A programming language is a language which the computer understands. It is just like any other language with its own syntax and constructs. The programmer uses it to make the computer follow his/her instructions.
+
+Now going back to that famous expression:
+
+Z = X + Y (If you know your maths well, then you should know that X, Y, Z etc. are all variables)
+
+Suppose we know X = 100, Y = 200 and we ask the computer to calculate the value of X + Y (which mathematically equates to Z).
+
+Here is how we achieve it:
+
+(I will use the syntax similar to C++ , but the language is not important, the concept is)
+
+Since we have three variables, we need to declare them in our program.
+Most good programming languages requires that you declare the variables explicitly.
+
+Therefore we write:
+
+```C++ 
+int X;
+int Y;
+int Z;
+```
+
+This is called variable declaration. The ``` int ``` is the type of variable that we will later discuss more.
+
+Since we know X is 100 and Y is 200, we write:
+
+```c++
+X = 100;
+Y = 200;
+```
+
+This is called variable assignment.
+
+We could actually write
+```c++
+int X = 100 
+```
+In that case we would call it variable declaration with initiation.
+
+Using this trick, we would be reducing some lines if we write the program like this:
+```c++
+int X = 100;
+int Y = 200;
+int Z;
+```
+Now it is very important to understand what goes on behind the scene, otherwise the mind blowing stuff we will be dealing with later (Y = X + Y) would be hard to make sense of.
+
+The moment we write var X or var Y, a space is allocated in RAM because unlike mathematical variables which exist mainly in our brains, the variables of a program resides in an actual physical location.
+
+Here is a conceptual diagram for better understanding:
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--tfL9inZ---/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/4w2ejuxzzlngv2xli5lg.png)
+
+X and Y are like rooms in a building (which is our RAM) and they have the capabilities of holding values that we assign to them. We might say Room Number X holds value 100 and Room Number Y holds value 200 because we had assigned the values through the assignment operator '=' to them.
+
+To calculate the value of X + Y, we could simply write X + Y
+
+However, doing this operation (every mathematical operation takes place in the CPU) and not storing the result somewhere would mean the result of this operation will be lost forever. Therefore we need to store the operation result somewhere and luckily we have enough room in our RAM to make provision for Z which will hold the value of the X + Y result.
+
+Therefore, when we write
+```c++
+Z = X + Y;
+```
+we are telling the computer to fetch the value of X and Y from RAM, add them in the CPU and then store the result in another space called Z.
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--FiZ7M2Qz--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/yecpi29n5x6ckkmsqmlc.png)
+
+"CPU instructions" in the above image are nothing but the program we have written which goes like this:
+```c++
+int X;
+int Y;
+int Z;
+
+X = 100;
+Y = 200;
+
+Z = X + Y;
+```
+Here Z is assigned a value which is the result of the operation of X + Y
+
+Now on to the expression
+Y = X + Y, which should make some sense now.
+
+What we are doing here is, fetch values of X and Y from RAM, add them in CPU and put the value back into Y.
+
+I hope by now you have understood computer programming languages are best read from right to left, almost a bit like Arabic isn't it :)? No, just scaring you a little! It is pretty intuitive. We just have to remember everything on the right side of an assignment operator ( '=' ) is processed first and then the assignment happens.
+
+Again, an image for illustration purpose:
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--3jBq-EAx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/2lzb42odthffmf3abx75.png)
+
+To round it off,
+
+* We declare variables - which allocates room for them in memory ( I hope after you read this, you would be a little careful about the memory from here on, after all everything has a price). ex. var X;
+
+* We assign variables - which puts values inside the room. ex. X = 100;
+
+* For performing an operation, we fetch these/refer to these assigned values by simply referring to the variables, mentioning the operation between them. For example,
+  X + Y means fetch value of X and fetch value of Y and perform the operation ('+') between these variables;
+
+* We store operation results by simply assigning to a room of our choice (either Z or Y);
+
+If you are observant, you'd see that an expression such as Y = X + Y doesn't need Z, hence we don't need to declare Z. This saves a bit of space in the memory. For basic programming it of-course doesn't matter. However, to be mindful of space and other resources will help you to become a great programmer some day.
+Yes, in modern day programming we have a lot of hardware resource, but sometimes we are abusing them by being careless with our approach to programming.
+
+After all set and done, you might be wondering what should we do with Y or Z. How about showing the calculated result to the user of your program? In some languages we do that by invoking an instruction called print. If you write something like print(Z), it will show Z as the output to the end user in a DOS like black screen (console). In case of Javascript we can show the value in a message box with alert(Z). However, displaying an output to the computer/mobile screen is another discussion.
+
+For now, do try to grasp the concepts mentioned here before jumping directly into programming.
 
 
 
@@ -53,9 +195,6 @@ Why use it?
 It is one of the world's most popular programming languages, so used that it's usually found in operating systems, Graphical User Interfaces and embedded systems. It also is an object oriented language, giving a clear structure to programs and allowing code to be reused, lowering development costs.
 
 As C++ is close to C# and Java, it makes it easy for programmers to switch to C++ or vice versa.
-
-
-
 
 
 
